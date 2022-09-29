@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  
+    <script>
+        
+      class Movie{
+        // a
+        constructor(title, studio, rating) {
+          this.title = title;
+          this.studio = studio;
+        //   this.rating = rating
+          if(rating==null){
+            // xxxxxx
+            return this.rating="PG"
+          }else{
+           return this.rating=rating
+          }
+
+        }
+
+        // c) Write a method getPG, which takes an array of base type Movie as its argument, 
+       
+
+        getPG(array){
+            // using filter method
+            var result4=array.filter((element)=>element.rating=="PG")
+            return result4
+
+        }
+
+      }
+      //  b) The constructor for the class Movie will set the class property rating to "PG" as default when no rating is provided.
+      var movie2 = new Movie("Casino Royale", "Eon Productions");
+    console.log(movie2)
+
+    //   d
+      var movie1 = new Movie("Casino Royale", "Eon Productions","PG13");
+
+
+      console.log(movie1);
+    
+
+    
+    // var movie3 = new Movie("XYZ", "Eon Productions","PG14");
+    var movie1 = new Movie("Casino Royale", "Eon Productions","PG13");
+
+        var film1 = new Movie("James Bond"," Eon Productions")
+        var film2 = new Movie("Die Another day","Eon Productions","PG13")
+        var film3 = new Movie("Spectors","Eon Productions","PG")
+        var film4 = new Movie("Goldfinger","Eon Productions","PG13")
+        var film5 = new Movie("avatar","James Cameron")
+
+    // instancename.methodname()
+    // movie1.getPG(array)
+    
+    // array:
+    var arr=[film1,film2,film3,film4,film5]
+    // console.log(arr)
+    // film1.getPG(array)
+    console.log(movie1.getPG(arr))
+    // flim1,film3,film5
+
+    </script>
+  </body>
+</html>
